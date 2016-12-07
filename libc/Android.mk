@@ -162,6 +162,7 @@ libc_bionic_ndk_src_files := \
     bionic/mknod.cpp \
     bionic/mntent.cpp \
     bionic/NetdClientDispatch.cpp \
+	bionic/libc_incognito_io.cpp \
     bionic/open.cpp \
     bionic/pathconf.cpp \
     bionic/pause.cpp \
@@ -981,7 +982,7 @@ LOCAL_CFLAGS := $(libc_common_cflags) \
 
 LOCAL_CONLYFLAGS := $(libc_common_conlyflags)
 LOCAL_CPPFLAGS := $(libc_common_cppflags) -Wold-style-cast
-LOCAL_C_INCLUDES := $(libc_common_c_includes) bionic/libstdc++/include
+LOCAL_C_INCLUDES := $(libc_common_c_includes) bionic/libstdc++/include bionic/libc/tiramisu_include
 LOCAL_MODULE := libc_bionic_ndk
 LOCAL_CLANG := $(use_clang)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(libc_common_additional_dependencies)
